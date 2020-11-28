@@ -21,26 +21,21 @@ function divide(a,b){
 
 function addNumber(number){
     if(number==-1){
-        if(screenText.value==0){
-            screenText.value=0+".";
-        }
-        else{
-        screenText.value+=".";
-        }
+       screenText.value+="."
     }
     else{
-        if((screenText.value==0 && screenText.value!="0.")|| (operationID!=0)){
+        if(screenText.value==0){
             screenText.value=number;
         }
         else{
             screenText.value+=number;
         }
+        }
     }
-    
-   
-}
 function backButton(){
-
+    let newString=screenText.value;
+    newString=screenText.value.slice(0,-1);
+    screenText.value=newString;
 }
 
 
@@ -56,7 +51,7 @@ function operate(sign){
     if(operationID==0){
         firstNumber=parseFloat(screenText.value);
         operationID=sign;
-        //screenText.value="";
+        screenText.value=0;
     }
     else{
         equals();
@@ -111,16 +106,16 @@ function showCurrentOperation(id){
             curretnSign.innerHTML="";
             break;
         case 1:
-            curretnSign.innerHTML="+";
+            curretnSign.innerHTML=firstNumber +"+";
             break;
         case 2:
-            curretnSign.innerHTML="-";
+            curretnSign.innerHTML=firstNumber +"-";
             break;
         case 3:
-            curretnSign.innerHTML="*";
+            curretnSign.innerHTML=firstNumber +"*";
             break;
         case 4:
-            curretnSign.innerHTML="/";
+            curretnSign.innerHTML=firstNumber +"/";
             break;
         default:
             curretnSign="";
