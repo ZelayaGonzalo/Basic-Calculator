@@ -8,10 +8,13 @@ body{
     display: flex;
     background-color: rgb(0, 0, 0);
     height: 80vh;
-    width: 350px;
+    width: 80vw;
     justify-content: center;
     align-items: center;
     margin:auto;
+    min-width: 200px;
+    max-width: 350px;
+    min-height: 300px;
 }
 .calculator{
     display: grid;
@@ -34,14 +37,83 @@ body{
     justify-content: center;
     align-items: center;
 }
+.calcbutton:hover{
+    background-color: cyan;
+}
+.calcbutton:active{
+    background-color: rgb(0, 162, 255);
+}
 
 #longbutton{
     grid-row: span 2;
+    background-color: rgb(255, 146, 4);
 }
+#longbutton:hover{
+    background-color: rgb(252, 101, 0);}
+#longbutton:active{
+    background-color: rgb(170, 57, 4);
+    
+}
+#operation{
+    background-color: rgb(243, 161, 9);
+}
+#operation:hover{
+    background-color: rgb(252, 101, 0);
+}
+#operation:active{
+    background-color: rgb(170, 57, 4);
+}
+
+
 #wideButton{
     grid-column: span 2;
-    background-color: rgb(77, 252, 77);
+    background-color: rgb(30, 223, 30);
 }
+#wideButton:hover{
+    background-color: rgb(4, 119, 4);
+}
+#wideButton:active{
+    background-color: rgb(2, 70, 2);
+}
+
 #erase{
     background: rgb(238, 52, 52);
 }
+#erase:hover{
+    background: rgb(158, 18, 18);
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0.6em;
+    margin: 0;
+    text-decoration: none;
+    background: #8b9e9e;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .screenText{
+      font-family: sans-serif;
+      font-size: 2em;
+      text-align: end;
+      background-color: rgba(117, 207, 207, 0.438);
+      display: flex;
+      height: 99%;
+      width: 99%;
+      justify-content: center;
+      align-content: center;
+      border:none
+  }
+  .currentSign{
+      height: 30%;
+      text-align: end;
+      font-family: sans-serif;
+      font-size: 2em;
+  }
